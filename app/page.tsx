@@ -1,9 +1,11 @@
-import HomePage from '@/app/HomePage/HomePage'
+import Page from "./HomePage/page";
+import Layouts from "./Layouts/Layouts";
+
 
 export default function Home() {
   return (
-    <main>
-      <HomePage/>
-    </main>
+    <Layouts>
+      <Page/>  
+    </Layouts>
   )
 }
