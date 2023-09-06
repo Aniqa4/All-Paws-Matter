@@ -13,7 +13,7 @@ export default function HomeLayouts({ children }: HomeLayoutsProps) {
             <Navbar />
             <div className='flex'>
                 <div><Sidebar /></div>
-                <div>
+                <div className='w-full overflow-y-auto h-screen'>
                     {children}
                 </div>
             </div>
