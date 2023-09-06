@@ -1,11 +1,10 @@
-import React from 'react'
-
 interface ServicesProps {
   heading: string;
   description: string;
 }
 
 export default function Services({heading,description}:ServicesProps) {
+    
   return (
     <div className='bg-gray-100 p-5'>
         <h1 className=' font-semibold'>
