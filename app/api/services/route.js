@@ -1,5 +1,11 @@
+import {Services} from "@/lib/model/services";
+import {connectionSrt} from "@/lib/db"
+import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function GET(){
-    return NextResponse.json({result:true})
+    await mongoose.connect(connectionSrt)
+    const data = await Services.find()
+    console.log(data);
+    return NextResponse.json({result:data})
 }
