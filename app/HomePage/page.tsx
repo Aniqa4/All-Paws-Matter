@@ -1,25 +1,23 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import HomeLayouts from './HomeLayouts'
 import Services from '../Components/Services'
 
-interface Service {
-  service_name: string;
-  description: string
+interface dataType{
+  x:any
+  service_name:string,
+  description:string
 }
-export default function page() {
-  const [services, setServices] = useState<Service[]>([]);
 
-  useEffect(() => {
-    fetch('services.json')
-      .then(res => res.json())
-      .then(data => {
-        setServices(data)
-      })
-  }, [])
-
-  console.log(services);
-
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/services')
+  const data = await res.json()
+  return data
+}
+export default async function page() {
+  const data = await getData();
+  const services = data.result
+  //console.log(services);
+  
   return (
     <HomeLayouts>
       <div className=' p-5 text-center border my-10'>
@@ -30,8 +28,8 @@ export default function page() {
         <h1 className=' text-center text-xl font-semibold '>What Do We Do?</h1>
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
-            services.map((x, index) =>
-              <Services key={index} heading={x.service_name}
+            services.map((x:dataType)=>
+              <Services heading={x.service_name}
                 description={x.description} />)
           }
         </div>

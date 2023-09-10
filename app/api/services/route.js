@@ -7,5 +7,5 @@ export async function GET(){
     await mongoose.connect(connectionSrt)
     const data = await Services.find()
     console.log(data);
-    return NextResponse.json({result:data})
+    return NextResponse.json(data)
 }
