@@ -9,3 +9,8 @@ export async function GET(){
     console.log(data);
     return NextResponse.json(data)
 }
+
+/* export async function POST(){
+    await mongoose.connect(connectionSrt);
+
+} */
