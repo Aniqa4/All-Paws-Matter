@@ -13,7 +13,7 @@ async function getData() {
   const data = await res.json()
   return data
 }
-export default async function page() {
+export default async function Page() {
   const data = await getData();
   const services = data.result
   //console.log(services);
@@ -25,7 +25,7 @@ export default async function page() {
         <p>A Nonprofit Animal Welfare Organization.</p>
       </div>
       <div className=' text-gray-500 container mx-auto'>
-        <h1 className=' text-center text-xl font-semibold '>What Do We Do?</h1>
+        <h1 className=' text-center text-xl font-semibold '>Our Services!</h1>
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
             services.map((x:dataType)=>
