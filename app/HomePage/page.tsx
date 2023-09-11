@@ -4,6 +4,7 @@ import Services from '../Components/Services'
 
 interface dataType{
   x:any
+  _id:string
   service_name:string,
   description:string
 }
@@ -29,7 +30,7 @@ export default async function Page() {
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
             services.map((x:dataType)=>
-              <Services heading={x.service_name}
+              <Services key={x._id} heading={x.service_name}
                 description={x.description} />)
           }
         </div>
