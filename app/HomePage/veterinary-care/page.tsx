@@ -1,7 +1,6 @@
 import React from 'react'
 import HomeLayouts from '../HomeLayouts'
 import Title from '@/app/Components/Title'
-import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -9,7 +8,7 @@ export default function Page() {
       <Title title='Vet Points' />
       <div className='grid grid-cols-4 gap-5 mx-10'>
         <div className='grid gap-2'>
-        <Image src="https://i.ibb.co/kX163fp/blank-profile-picture-973460-1280.webp" alt=''></Image>
+          <img src="https://i.ibb.co/kX163fp/blank-profile-picture-973460-1280.webp" alt="" />
           <div className='grid gap-2'>
             <p>Hospital Name</p>
             <h1>Location</h1>
