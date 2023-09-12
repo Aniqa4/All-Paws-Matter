@@ -20,7 +20,7 @@ export default function page() {
             <input type="submit" value="Sign Up" className=' bg-emerald-900 text-white py-2 my-2 hover:bg-emerald-700'/>
           </form>
           
-          <p className='text-center pt-10'>Don't have an account?<Link href={'log-in'} className='underline'> Sign In</Link></p>
+          <p className='text-center pt-10'>Already have an account?<Link href={'log-in'} className='underline'> Sign In</Link></p>
           <p className='text-center py-5'>error</p>
 
         </div>

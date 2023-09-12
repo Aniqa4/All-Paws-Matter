@@ -29,7 +29,7 @@ export default async function Page() {
         <h1 className=' text-center text-xl font-semibold '>Our Services!</h1>
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
-            services.map((x:dataType)=>
+            services?.map((x:dataType)=>
               <Services key={x._id} heading={x.service_name}
                 description={x.description} />)
           }

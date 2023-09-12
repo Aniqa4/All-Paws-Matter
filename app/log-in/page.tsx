@@ -19,10 +19,10 @@ export default function Page() {
             <input type="submit" value="Sign In" className=' bg-emerald-900 text-white py-2 my-2 hover:bg-emerald-700'/>
           </form>
           <Divider>Or</Divider>
-          <div className='border rounded-full w-1/4 grid justify-center mx-auto mt-10'>
+          <div className="border rounded-full w-1/4 grid justify-center mx-auto mt-10">
             <p className='flex items-center gap-2 text-xl py-1'><span><FcGoogle/></span>Sign In With Google</p>
           </div>
-          <p className='text-center pt-10'>Don't have an account?<Link href={'Register'} className='underline'> Sign Up</Link></p>
+          <p className='text-center pt-10'>Don&apos;t have an account?<Link href={"Register"} className="underline"> Sign Up</Link></p>
           <p className='text-center py-5'>error</p>
 
         </div>
