@@ -2,15 +2,14 @@ import React from 'react'
 import HomeLayouts from './HomeLayouts'
 import Services from '../Components/Services'
 
-interface dataType{
-  x:any
-  _id:string
+interface ServiceData{
+  _id:string,
   service_name:string,
   description:string
 }
 
 async function getData() {
-  const res = await fetch('/api/services')
+  const res = await fetch('http://localhost:3000/api/services')
   const data = await res.json()
   return data
 }
@@ -29,7 +28,7 @@ export default async function Page() {
         <h1 className=' text-center text-xl font-semibold '>Our Services!</h1>
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
-            services.map((x:dataType)=>
+            services.map((x:ServiceData)=>
               <Services key={x._id} heading={x.service_name}
                 description={x.description} />)
           }
