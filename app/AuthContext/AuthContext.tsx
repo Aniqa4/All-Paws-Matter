@@ -55,7 +55,7 @@ function AuthProvider({ children }: ChildrenType) {
     return () => {
       unsubscribe();
     }
-  }, []); // Add an empty dependency array to useEffect
+  }, []);
 
   const authInfo: AuthContextType = {
     user,

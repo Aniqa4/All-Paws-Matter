@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import HomeLayouts from './HomeLayouts'
 import Services from '../Components/Services'
 
@@ -8,16 +9,16 @@ interface ServiceData{
   description:string
 }
 
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/services')
-  const data = await res.json()
-  return data
-}
-export default async function Page() {
-  const data = await getData();
-  const services = data.result
-  //console.log(services);
+export default function Page() {
+  const [services,setServices]=useState([])
   
+  useEffect(()=>{
+    fetch('http://localhost:5000/services')
+    .then(res=>res.json())
+    .then(data=>{
+      setServices(data)
+    })
+  },[])
   return (
     <HomeLayouts>
       <div className=' p-5 text-center border my-10'>
