@@ -10,8 +10,8 @@ export default function Sidebar() {
             <li className='border-b py-3'><Link href={'/HomePage/adoption-programs'}>Adoption Programs</Link></li>
             <li className='border-b py-3'><Link href={'/HomePage/veterinary-care'}>Veterinary Care</Link></li>
             <li className='border-b py-3'><Link href={'/HomePage/emergency-response'}>Emergency Response</Link></li>
-            <li className='border-b py-3'><Link href={'/HomePage/education-and-Outreach'}>Education & Outreach</Link></li>
-            <li className='border-b py-3'><Link href={'/HomePage/advocacy-and-lobbying'}>Advocacy and Lobbying</Link></li>
+            {/* <li className='border-b py-3'><Link href={'/HomePage/education-and-Outreach'}>Education & Outreach</Link></li>
+            <li className='border-b py-3'><Link href={'/HomePage/advocacy-and-lobbying'}>Advocacy and Lobbying</Link></li> */}
         </ul>
     </div>
   )

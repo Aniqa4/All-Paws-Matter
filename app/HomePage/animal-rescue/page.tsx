@@ -1,5 +1,5 @@
 'use client'
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HomeLayouts from '../HomeLayouts'
 import Title from '@/app/Components/Title'
 import Image from 'next/image'
@@ -7,6 +7,7 @@ import Image from 'next/image'
 interface PropType {
   _id: string,
   animal_type: string,
+  photo_url:string
   age: string,
   breed: string,
   date: string,
@@ -38,7 +39,7 @@ const formatDate = (date:string) => {
         {
           data.map((x: PropType) =>
             <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>
-              <Image src="https://i.ibb.co/kX163fp/blank-profile-picture-973460-1280.webp" alt='' width={500} height={500} />
+              <Image src={x.photo_url} alt='' width={500} height={500} />
               <div className='grid gap-2'>
                 <p className='text-base font-semibold'>{x.animal_type}</p>
                 <h1>age: {x.age}</h1>

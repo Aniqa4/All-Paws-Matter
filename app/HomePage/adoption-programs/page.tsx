@@ -7,6 +7,7 @@ import Image from 'next/image';
 interface PropType{
   _id:string,
   animal_type:string,
+  photo_url: string,
   age:string,
   breed:string,
   type:string,
@@ -31,14 +32,14 @@ export default function Page() {
         {
           data.map((x:PropType) =>
             <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>
-              <Image src="https://i.ibb.co/kX163fp/blank-profile-picture-973460-1280.webp" alt='' width={500} height={500} />
+              <Image src={x.photo_url} alt='' width={500} height={500} />
               <div className='grid gap-2'>
                 <p className='text-base font-semibold'>{x.animal_type}</p>
                 <h1>age: {x.age}</h1>
                 <p>Breed: {x.breed}</p>
                 <p className={x.type==='up for adoption'?'text-green-700':'text-red-600'}>Status: {x.type}</p>
                 <p>{x.description}</p>
-                <button className=' bg-emerald-700 text-white hover:bg-emerald-500 py-2'>Apply</button>
+                <button className=' bg-emerald-700 text-white hover:bg-emerald-500 py-2'>Adopt</button>
               </div>
             </div>)
         }
