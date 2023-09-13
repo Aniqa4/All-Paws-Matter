@@ -13,7 +13,7 @@ interface PropType{
   description:string
 }
 
-export default function page() {
+export default function Page() {
   const [data, setData] = useState([])
 
   useEffect(() => {
