@@ -17,7 +17,7 @@ export default function Page() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('https://all-paws-matter-server-enpletn2q-aniqa4.vercel.app/up-for-adoption')
+    fetch('https://all-paws-matter-server.vercel.app/up-for-adoption')
       .then(res => res.json())
       .then(data => {
         setData(data)
@@ -30,13 +30,14 @@ export default function Page() {
       <div className='grid grid-cols-6 gap-5 mx-10 mb-20'>
         {
           data.map((x:PropType) =>
-            <div className='grid gap-2'>
+            <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>
               <Image src="https://i.ibb.co/kX163fp/blank-profile-picture-973460-1280.webp" alt='' width={500} height={500} />
               <div className='grid gap-2'>
-                <p>{x.animal_type}</p>
+                <p className='text-base font-semibold'>{x.animal_type}</p>
                 <h1>age: {x.age}</h1>
                 <p>Breed: {x.breed}</p>
-                <p>Status: {x.type}</p>
+                <p className={x.type==='up for adoption'?'text-green-700':'text-red-600'}>Status: {x.type}</p>
+                <p>{x.description}</p>
                 <button className=' bg-emerald-700 text-white hover:bg-emerald-500 py-2'>Apply</button>
               </div>
             </div>)
