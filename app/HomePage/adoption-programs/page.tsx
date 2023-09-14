@@ -37,7 +37,7 @@ export default function Page() {
                 <p className='text-base font-semibold'>{x.animal_type}</p>
                 <h1>age: {x.age}</h1>
                 <p>Breed: {x.breed}</p>
-                <p className={x.type==='up for adoption'?'text-green-700':'text-red-600'}>Status: {x.type}</p>
+                <p className={x.type==='Up for adoption'?'text-green-700':'text-red-600'}>Status: {x.type}</p>
                 <p>{x.description}</p>
                 <button className=' bg-emerald-700 text-white hover:bg-emerald-500 py-2'>Adopt</button>
               </div>

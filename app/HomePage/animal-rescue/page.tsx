@@ -35,7 +35,7 @@ const formatDate = (date:string) => {
   return (
     <HomeLayouts>
       <Title title='Rescued Animals' />
-      <div className='grid grid-cols-4 gap-5 mx-10'>
+      <div className='grid grid-cols-4 gap-5 mx-10 mb-20'>
         {
           data.map((x: PropType) =>
             <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>

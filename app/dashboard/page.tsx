@@ -32,21 +32,21 @@ export default function Page() {
             </div>
           </div>
             <button onClick={()=>setOpen(false)} 
-            className={open===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Collapse</button>
+            className={open===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Close</button>
           <div onClick={()=>handleOpenTwo()} className='mb-5'>
             <p className='text-center bg-gray-200 py-5  hover:bg-gray-100'>Add new Adoption data</p>
             <div className={openTwo===true?'':'hidden'}><AnimalForAdoption/>
             </div>
           </div>
             <button onClick={()=>setOpenTwo(false)} 
-            className={openTwo===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Collapse</button>
+            className={openTwo===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Close</button>
           <div onClick={()=>handleOpenThree()} className='mb-5'>
             <p className='text-center bg-gray-200 py-5  hover:bg-gray-100'>Add new Veterinary data</p>
             <div className={openThree===true?'':'hidden'}><AddVets/>
             </div>
           </div>
             <button onClick={()=>setOpenThree(false)} 
-            className={openThree===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Collapse</button>
+            className={openThree===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Close</button>
         </div>
       </Layouts>
     </div>
