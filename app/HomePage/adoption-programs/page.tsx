@@ -28,9 +28,9 @@ export default function Page() {
   return (
     <HomeLayouts>
       <Title title='Up for adoption' />
-      <div className='grid grid-cols-6 gap-5 mx-10 mb-20'>
+      <div className='grid grid-cols-4 w-3/4 mx-auto gap-5 mb-20'>
         {
-          data.map((x:PropType) =>
+          data?.map((x:PropType) =>
             <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>
               <Image src={x.photo_url} alt='' width={500} height={500} />
               <div className='grid gap-2'>

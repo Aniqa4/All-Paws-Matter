@@ -6,8 +6,7 @@ import { Divider } from '@mui/material';
 import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../AuthContext/AuthContext';
-import { GoogleAuthProvider } from 'firebase/auth';
+
 
 
 export default function Page() {

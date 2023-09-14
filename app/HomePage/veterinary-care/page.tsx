@@ -26,13 +26,13 @@ export default function Page() {
   return (
     <HomeLayouts>
       <Title title='Our Veterinarians' />
-      <div className='grid grid-cols-4 justify-center gap-10 mx-10 mb-20'>
+      <div className='grid justify-center gap-10 mx-10 mb-2'>
       {
-          data.map((x: PropType) =>
-            <div key={x._id} className='grid gap-2 text-gray-600 text-sm'>
-              <Image src={x.photo_url} alt='' width={500} height={500} className='rounded-xl'/>
-              <div className='grid gap-2'>
-                <p className='text-base font-semibold'>{x.name}</p>
+          data?.map((x: PropType) =>
+            <div key={x._id} className='grid grid-cols-2 gap-10 justify-center items-center text-gray-600 bg-gray-100'>
+              <Image src={x.photo_url} alt='' width={500} height={500}/>
+              <div className='py-5'>
+                <p className='text-3xl font-semibold'>{x.name}</p>
                 <p>Specialty: {x.specialty}</p>
                 <h1>Phone: {x.phone_number}</h1>
                 <p>Email: {x.email}</p>
