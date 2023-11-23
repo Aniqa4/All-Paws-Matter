@@ -1,24 +1,18 @@
-'use client'
-import React, { useEffect, useState } from 'react'
 import HomeLayouts from './home/HomeLayouts'
 import Services from '../components/Services'
+import { ServicesDataProps } from '../interfaces/servicesDataProps'
 
-interface ServiceData{
-  _id:string,
-  service_name:string,
-  description:string
+async function getServices() {
+  const res = await fetch('https://all-paws-matter-server-enpletn2q-aniqa4.vercel.app/services', {
+    cache: 'no-store'
+  })
+  const data = await res.json()
+  return data
 }
 
-export default function Page() {
-  const [services,setServices]=useState([])
-  
-  useEffect(()=>{
-    fetch('https://all-paws-matter-server-enpletn2q-aniqa4.vercel.app/services')
-    .then(res=>res.json())
-    .then(data=>{
-      setServices(data)
-    })
-  },[])
+const Page:React.FC<{}> = async () => {
+  const services = await getServices()
+
   return (
     <HomeLayouts>
       <div className=' p-5 text-center border my-10'>
@@ -29,12 +23,16 @@ export default function Page() {
         <h1 className=' text-center text-xl font-semibold '>Our Services!</h1>
         <div className='grid grid-cols-2 gap-5 my-10'>
           {
-            services.map((x:ServiceData)=>
-              <Services key={x._id} heading={x.service_name}
-                description={x.description} />)
+            services.map((service: ServicesDataProps) =>
+              <Services key={service._id} heading={service.service_name}
+                description={service.description} />)
           }
         </div>
       </div>
     </HomeLayouts>
   )
 }
+
+export default Page
+
+
