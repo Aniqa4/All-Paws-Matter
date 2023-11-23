@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import HomeLayouts from '../HomeLayouts'
-import Title from '@/app/Components/Title'
+import Title from '@/app/components/Title'
 import Image from 'next/image';
 
 interface PropType{

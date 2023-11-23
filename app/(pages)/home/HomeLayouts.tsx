@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
-import Sidebar from '../Sidebar/Sidebar';
+import Navbar from '../../components/layout/Navbar';
+import Footer from '../../components/layout/Footer';
+import Sidebar from '../../components/Sidebar';
 
 interface HomeLayoutsProps {
     children: ReactNode;

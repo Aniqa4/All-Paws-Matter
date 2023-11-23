@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeLayouts from '../HomeLayouts'
-import Title from '@/app/Components/Title';
+import Title from '@/app/components/Title';
 import { IoMdCall } from 'react-icons/io';
 
 export default function Page() {

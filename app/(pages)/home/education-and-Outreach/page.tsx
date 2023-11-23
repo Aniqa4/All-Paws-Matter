@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeLayouts from '../HomeLayouts'
-import Title from '@/app/Components/Title'
+import Title from '@/app/components/Title'
 
 export default function Page() {
   return (

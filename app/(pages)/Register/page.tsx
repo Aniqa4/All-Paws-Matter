@@ -1,7 +1,7 @@
 import React from 'react'
-import Layouts from '../Layouts/Layouts'
+import Layouts from '../../components/layout/Layout'
 import Link from 'next/link'
-import Title from '../Components/Title'
+import Title from '../../components/Title'
 
 
 export default function page() {

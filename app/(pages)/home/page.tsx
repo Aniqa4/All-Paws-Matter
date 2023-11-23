@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import HomeLayouts from './HomeLayouts'
-import Services from '../Components/Services'
+import Services from '../../components/Services'
 
 interface ServiceData{
   _id:string,

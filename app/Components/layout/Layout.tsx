@@ -1,5 +1,5 @@
-import Footer from '@/app/Footer/Footer';
-import Navbar from '@/app/Navbar/Navbar';
+import Footer from '@/app/components/layout/Footer';
+import Navbar from '@/app/components/layout/Navbar';
 import React, { ReactNode } from 'react'
 
 interface LayoutsProps {
