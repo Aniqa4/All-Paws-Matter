@@ -1,15 +1,13 @@
 import React from 'react';
 
 interface TitleProps {
-    title: string;
-  }
+  title: string;
+}
 
-function Title({title}:TitleProps) {
+export default function Title({ title }: TitleProps) {
   return (
     <div>
-        <h1 className=' text-center py-10 text-xl uppercase'>{title}</h1>
+      <h1 className=' text-center py-10 text-xl uppercase'>{title}</h1>
     </div>
   )
 }
-
-export default Title
