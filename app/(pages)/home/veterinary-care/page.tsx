@@ -1,5 +1,3 @@
-'use client'
-import React, { useEffect, useState } from 'react'
 import HomeLayouts from '../HomeLayouts'
 import Title from '@/app/components/Title'
 import Image from 'next/image'
@@ -15,7 +13,7 @@ async function getVetData() {
 
 const Page: React.FC<{}> = async () => {
   const vetData = await getVetData()
-  
+
   return (
     <HomeLayouts>
       <Title title='Our Veterinarians' />
