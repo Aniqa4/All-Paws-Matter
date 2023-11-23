@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
-import Layouts from '../../components/layout/Layout';
-import Title from '../../components/Title';
+import Layout from '../../components/layout/Layout';
 import { Divider } from '@mui/material';
 import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
+import Title from '@/app/components/Title';
 
 export default function Page() {
   
 
   return (
     <div className='pt-16'>
-      <Layouts>
+      <Layout>
         <Title title='Sign in'/>
         <div className=' container mx-auto pb-36'>
           <form  className=' grid w-1/3 mx-auto mb-10'>
@@ -29,7 +29,7 @@ export default function Page() {
           <p className='text-center py-5'></p>
 
         </div>
-      </Layouts>
+      </Layout>
     </div>
   )
 }

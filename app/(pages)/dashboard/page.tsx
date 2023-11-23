@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
-import Layouts from '../../components/layout/Layout'
-import Title from '../../components/Title'
 import RescuedAnimal from './RescuedAnimal'
 import AnimalForAdoption from './AnimalForAdoption'
 import AddVets from './AddVets'
+import Title from '@/app/components/Title'
+import Layout from '@/app/components/layout/Layout'
 
 export default function Page() {
   const [open, setOpen] = useState(false)
@@ -23,7 +23,7 @@ export default function Page() {
  
   return (
     <div className='pt-16'>
-      <Layouts>
+      <Layout>
         <Title title='dashboard' />
         <div className='container mx-auto mb-20'>
           <div onClick={()=>handleOpen()} className='mb-5'>
@@ -48,7 +48,7 @@ export default function Page() {
             <button onClick={()=>setOpenThree(false)} 
             className={openThree===false?'hidden':'bg-red-700 text-white px-3 py-1 font-semibold flex mx-auto my-2'}>Close</button>
         </div>
-      </Layouts>
+      </Layout>
     </div>
   )
 }

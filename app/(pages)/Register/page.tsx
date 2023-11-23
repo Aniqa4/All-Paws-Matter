@@ -1,13 +1,13 @@
 import React from 'react'
-import Layouts from '../../components/layout/Layout'
+import Layout from '../../components/layout/Layout'
 import Link from 'next/link'
-import Title from '../../components/Title'
+import Title from '@/app/components/Title'
 
 
 export default function page() {
   return (
     <div className='pt-16'>
-      <Layouts>
+      <Layout>
         <Title title='Sign Up' />
         <div className=' container mx-auto pb-36'>
           <form className=' grid w-1/3 mx-auto mb-10'>
@@ -22,7 +22,7 @@ export default function page() {
           <p className='text-center pt-10'>Already have an account?<Link href={'log-in'} className='underline'> Sign In</Link></p>
           <p className='text-center py-5'>error</p>
         </div>
-      </Layouts>
+      </Layout>
     </div>
   )
 }
