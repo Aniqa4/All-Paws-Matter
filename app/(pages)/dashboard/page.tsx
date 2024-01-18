@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
-import RescuedAnimal from './RescuedAnimal'
-import AnimalForAdoption from './AnimalForAdoption'
-import AddVets from './AddVets'
+import RescuedAnimal from './sections/RescuedAnimal'
+import AnimalForAdoption from './sections/AnimalForAdoption'
+import AddVets from './sections/AddVets'
 import Title from '@/app/components/Title'
 import Layout from '@/app/components/layout/Layout'
 

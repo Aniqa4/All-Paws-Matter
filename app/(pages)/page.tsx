@@ -10,7 +10,7 @@ async function getServices() {
   return data
 }
 
-const Page:React.FC<{}> = async () => {
+const Page:React.FC = async () => {
   const services = await getServices()
 
   return (
